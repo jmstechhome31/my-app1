@@ -6,6 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+          terraform_version: "1.7.1" # Specify your required version
     - name: Run a one-line script
       run: echo Hello, world!
     - name: java version
